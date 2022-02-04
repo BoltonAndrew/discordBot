@@ -19,7 +19,7 @@ client.on("messageCreate", (msg) => {
       ) {
         msg.reply({
           content:
-            "Please answer the following questions to help us identify a solution: \n What topic/project/challenge I need help with? \n What I expect my code to do? \n What is actually happening? \n What I've tried to do to fix it?",
+            "Please answer the following questions to help us identify a solution: \n What topic/project/challenge I need help with? \n What I expect my code to do? \n What is actually happening? \n What I've tried to do to fix it? \n My GitHbub repo link:",
         });
         bool = true;
       }
