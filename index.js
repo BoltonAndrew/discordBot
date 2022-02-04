@@ -1,5 +1,8 @@
 require("dotenv").config();
+const express = require("express");
 const { Client, Intents } = require("discord.js");
+const app = express();
+const port = process.env.PORT || 5000;
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -28,3 +31,7 @@ client.on("messageCreate", (msg) => {
 });
 
 client.login(process.env.TOKEN);
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
